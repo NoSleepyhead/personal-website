@@ -102,6 +102,28 @@ backToTop.addEventListener('click', function() {
     });
 });
 
+// 主题切换功能
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// 检查本地存储中的主题设置
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-theme');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+themeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-theme');
+    
+    if (body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+});
+
 // 项目卡片悬停效果
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach(card => {
