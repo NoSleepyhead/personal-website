@@ -261,11 +261,24 @@ nav .container {
 
 /* 英雄区域 */
 .hero {
-    background: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cheetah%20sitting%20on%20rock%20in%20savanna%20landscape%20wildlife%20photography&image_size=landscape_16_9') no-repeat center center/cover;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: #ffffff;
     padding: 150px 0;
     margin-top: 0;
     position: relative;
+}
+
+/* 背景图片 */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cheetah%20sitting%20on%20rock%20in%20savanna%20landscape%20wildlife%20photography&image_size=landscape_16_9') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.7;
 }
 
 .hero-overlay {
@@ -275,12 +288,12 @@ nav .container {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+    z-index: 1;
 }
 
 .hero .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-content {
