@@ -90,6 +90,15 @@ body.dark-theme .btn:hover {
     background: #ffffff;
 }
 
+body.dark-theme .profile-card {
+    background: rgba(30, 30, 30, 0.95);
+    color: #f0f0f0;
+}
+
+body.dark-theme .profile-card p {
+    color: #b0b0b0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -252,10 +261,9 @@ nav .container {
 
 /* 英雄区域 */
 .hero {
-    background: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20girl%20with%20short%20blue%20hair%20wearing%20white%20dress%20standing%20on%20beach%20with%20red%20sky%20background%20artistic%20style&image_size=landscape_16_9') no-repeat center center/cover;
+    background: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cheetah%20sitting%20on%20rock%20in%20savanna%20landscape%20wildlife%20photography&image_size=landscape_16_9') no-repeat center center/cover;
     color: #ffffff;
-    text-align: center;
-    padding: 200px 0 150px;
+    padding: 150px 0;
     margin-top: 0;
     position: relative;
 }
@@ -266,7 +274,7 @@ nav .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
@@ -275,7 +283,59 @@ nav .container {
     z-index: 1;
 }
 
-.hero h2 {
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    color: #333333;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.profile-card p {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.welcome-message {
+    flex: 1;
+    min-width: 300px;
+}
+
+.welcome-message h2 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
@@ -283,19 +343,12 @@ nav .container {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero .name {
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.hero p {
+.welcome-message p {
     font-size: 1.2rem;
     margin-bottom: 3rem;
     color: #f0f0f0;
     font-weight: 400;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
