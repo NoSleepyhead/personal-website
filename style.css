@@ -99,6 +99,7 @@ nav .container {
 /* 搜索框 */
 .search-box {
     position: relative;
+    margin-left: 20px;
 }
 
 .search-box input {
@@ -108,9 +109,15 @@ nav .container {
     font-size: 0.9rem;
     width: 200px;
     transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.search-box input:hover {
+    opacity: 0.9;
 }
 
 .search-box input:focus {
+    opacity: 1;
     outline: none;
     border-color: #000000;
     width: 250px;
