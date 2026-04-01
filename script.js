@@ -175,9 +175,56 @@ tags.forEach(tag => {
 // 搜索功能
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
+const searchHistory = document.getElementById('search-history');
+const historyList = document.getElementById('history-list');
+const clearHistoryBtn = document.getElementById('clear-history');
 const articleCards = document.querySelectorAll('.article-card');
 const featuredArticles = document.querySelectorAll('.featured-articles .article-list li');
 
+// 存储搜索历史到本地存储
+function saveSearchHistory(searchTerm) {
+    if (!searchTerm) return;
+    
+    let history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+    
+    // 移除重复项
+    history = history.filter(item => item !== searchTerm);
+    
+    // 添加到历史记录开头
+    history.unshift(searchTerm);
+    
+    // 限制历史记录数量
+    if (history.length > 5) {
+        history = history.slice(0, 5);
+    }
+    
+    localStorage.setItem('searchHistory', JSON.stringify(history));
+    displaySearchHistory();
+}
+
+// 显示搜索历史
+function displaySearchHistory() {
+    const history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+    historyList.innerHTML = '';
+    
+    if (history.length === 0) {
+        searchHistory.classList.remove('show');
+        return;
+    }
+    
+    history.forEach(term => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="fas fa-history"></i>${term}`;
+        li.addEventListener('click', function() {
+            searchInput.value = term;
+            searchHistory.classList.remove('show');
+            performSearch();
+        });
+        historyList.appendChild(li);
+    });
+}
+
+// 执行搜索
 function performSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     
@@ -191,6 +238,9 @@ function performSearch() {
         });
         return;
     }
+    
+    // 保存搜索历史
+    saveSearchHistory(searchTerm);
     
     // 搜索文章卡片
     articleCards.forEach(card => {
@@ -218,6 +268,13 @@ function performSearch() {
     });
 }
 
+// 清空搜索历史
+function clearSearchHistory() {
+    localStorage.removeItem('searchHistory');
+    historyList.innerHTML = '';
+    searchHistory.classList.remove('show');
+}
+
 // 点击搜索按钮执行搜索
 searchBtn.addEventListener('click', performSearch);
 
@@ -225,5 +282,21 @@ searchBtn.addEventListener('click', performSearch);
 searchInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         performSearch();
+    }
+});
+
+// 点击搜索框显示历史记录
+searchInput.addEventListener('focus', function() {
+    displaySearchHistory();
+    searchHistory.classList.add('show');
+});
+
+// 点击清空历史记录按钮
+clearHistoryBtn.addEventListener('click', clearSearchHistory);
+
+// 点击页面其他地方隐藏搜索历史
+document.addEventListener('click', function(e) {
+    if (!searchInput.contains(e.target) && !searchHistory.contains(e.target)) {
+        searchHistory.classList.remove('show');
     }
 });
