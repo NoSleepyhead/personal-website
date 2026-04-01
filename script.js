@@ -171,3 +171,59 @@ tags.forEach(tag => {
         this.style.transform = 'translateY(0)';
     });
 });
+
+// 搜索功能
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+const articleCards = document.querySelectorAll('.article-card');
+const featuredArticles = document.querySelectorAll('.featured-articles .article-list li');
+
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    if (!searchTerm) {
+        // 如果搜索词为空，显示所有文章
+        articleCards.forEach(card => {
+            card.style.display = 'block';
+        });
+        featuredArticles.forEach(article => {
+            article.style.display = 'block';
+        });
+        return;
+    }
+    
+    // 搜索文章卡片
+    articleCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const content = card.querySelector('.article-content p').textContent.toLowerCase();
+        const category = card.querySelector('.article-category').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || content.includes(searchTerm) || category.includes(searchTerm)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // 搜索精选文章
+    featuredArticles.forEach(article => {
+        const title = article.querySelector('.article-title').textContent.toLowerCase();
+        const date = article.querySelector('.article-date').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || date.includes(searchTerm)) {
+            article.style.display = 'block';
+        } else {
+            article.style.display = 'none';
+        }
+    });
+}
+
+// 点击搜索按钮执行搜索
+searchBtn.addEventListener('click', performSearch);
+
+// 按回车键执行搜索
+searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        performSearch();
+    }
+});
