@@ -10,7 +10,7 @@ nav {
 }
 
 /* 导航链接列表 */
-nav-links {
+.nav-links {
   list-style: none;
   display: flex; /* 使用flexbox水平排列 */
   justify-content: center; /* 水平居中 */
@@ -19,12 +19,12 @@ nav-links {
 }
 
 /* 导航项 */
-nav-links li {
+.nav-links li {
   margin: 0 15px; /* 项之间的间距 */
 }
 
 /* 导航链接 */
-nav-links a {
+.nav-links a {
   color: black; /* 文字颜色 */
   text-decoration: none; /* 去除下划线 */
   padding: 8px 12px; /* 链接内边距 */
@@ -32,6 +32,6 @@ nav-links a {
 }
 
 /* 链接悬停效果 */
-nav-links a:hover {
+.nav-links a:hover {
   color: #f0f0f0;
 }
