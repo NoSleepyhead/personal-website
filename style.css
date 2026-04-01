@@ -261,7 +261,7 @@ nav .container {
 
 /* 英雄区域 */
 .hero {
-    background: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20girl%20with%20pink%20hair%20wearing%20mechanical%20armor%20cyberpunk%20style%20colorful%20background&image_size=landscape_16_9') no-repeat center center/cover;
+    background: url('photo/002.jpg') no-repeat center center/cover;
     color: #ffffff;
     padding: 200px 0;
     margin-top: 0;
@@ -270,6 +270,9 @@ nav .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-overlay {
@@ -282,73 +285,16 @@ nav .container {
     z-index: 1;
 }
 
+/* 英雄区域图片展示 */
 .hero-content {
     position: relative;
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 30px;
-    margin: 0 auto;
-}
-
-.hero-left {
-    flex: 0 0 200px;
-    text-align: center;
-}
-
-.hero-center {
-    flex: 1;
-    text-align: center;
-    margin: 0 2rem;
-}
-
-.hero-right {
-    flex: 0 0 200px;
-}
-
-.hero .profile-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-    border: 4px solid #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.hero .profile-avatar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-}
-
-.hero .profile-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.hero-center h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    letter-spacing: 2px;
-}
-
-.hero-center p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #f0f0f0;
-    font-weight: 400;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 /* 内容区域 */
@@ -1422,24 +1368,12 @@ footer {
         padding: 0;
     }
     
-    .hero-center h1 {
-        font-size: 2.5rem;
+    .hero {
+        min-height: 70vh;
     }
     
     .hero-content {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    .hero-left,
-    .hero-right {
-        flex: 1;
-    }
-    
-    .hero .profile-avatar {
-        width: 120px;
-        height: 120px;
+        padding: 0 20px;
     }
 }
 
@@ -1493,12 +1427,13 @@ footer {
         justify-content: space-between;
     }
     
-    .hero h2 {
-        font-size: 2.5rem;
+    .hero {
+        min-height: 60vh;
+        background-attachment: scroll;
     }
     
-    .hero p {
-        font-size: 1rem;
+    .hero-content {
+        padding: 0 15px;
     }
     
     .about-content {
