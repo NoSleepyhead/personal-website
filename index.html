@@ -24,16 +24,16 @@
                 <div class="nav-container">
                     <ul class="nav-links">
                         <li class="dropdown">
-                            <a href="#programming">编程 <i class="fas fa-chevron-down"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#3d">3D <i class="fas fa-chevron-down"></i></a>
+                            <a href="#home">首页 <i class="fas fa-chevron-down"></i></a>
                         </li>
                         <li class="dropdown">
                             <a href="#securities">证券 <i class="fas fa-chevron-down"></i></a>
                         </li>
                         <li class="dropdown">
-                            <a href="#english">英语 <i class="fas fa-chevron-down"></i></a>
+                            <a href="#programming">编程 <i class="fas fa-chevron-down"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#modeling">建模 <i class="fas fa-chevron-down"></i></a>
                         </li>
                         <li class="dropdown">
                             <a href="#interests">兴趣 <i class="fas fa-chevron-down"></i></a>
@@ -52,195 +52,139 @@
         <!-- 首页展区 -->
         <div class="hero" id="home">
             <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="profile-card">
-                        <div class="profile-avatar">
-                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20girl%20with%20short%20blue%20hair%20wearing%20white%20dress%20artistic%20style&image_size=square" alt="个人头像">
-                        </div>
-                        <h3>Hu</h3>
-                        <p>什么都想尝试，什么都不会</p>
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="profile-avatar">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20girl%20with%20blue%20hair%20wearing%20black%20and%20white%20dress%20standing%20pose%20artistic%20style&image_size=square" alt="个人头像">
                     </div>
-                    <div class="welcome-message">
-                        <h2>欢迎</h2>
-                        <p>记录成长</p>
-                        <a href="#articles" class="btn">浏览文章</a>
-                    </div>
+                </div>
+                <div class="hero-center">
+                    <h1>晓林的博客</h1>
+                    <p>有些东西（梦想）只是一直放在心里</p>
+                </div>
+                <div class="hero-right">
+                    <!-- 预留空间 -->
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 关于我 -->
-    <section id="about" class="about">
+    <!-- 内容区域 -->
+    <section id="content" class="content">
         <div class="container">
-            <h2>关于我</h2>
-            <div class="about-content">
-                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20minimalist%20portrait%20white%20background%20clean%20style&image_size=portrait_4_3" alt="个人照片">
-                <div class="about-text">
-                    <p>你好，我是一名热爱学习和分享的开发者。我喜欢探索新技术，解决编程问题，并将我的学习心得记录下来。</p>
-                    <p>在这个博客中，我会分享前端开发、后端技术、编程技巧以及我的学习历程和心得体会。</p>
-                    <p>希望我的分享能够帮助到正在学习编程的你，也欢迎与我交流讨论技术问题。</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 文章列表 -->
-    <section id="articles" class="articles">
-        <div class="container">
-            <div class="section-header">
-                <h2>最新文章</h2>
-                <div class="article-filter">
-                    <button class="filter-btn active">全部</button>
-                    <button class="filter-btn">前端开发</button>
-                    <button class="filter-btn">后端开发</button>
-                    <button class="filter-btn">开发工具</button>
-                    <button class="filter-btn">学习心得</button>
-                </div>
-            </div>
-            <div class="articles-grid">
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=javascript%20async%20programming%20code%20snippet%20modern%20clean%20style&image_size=landscape_4_3" alt="JavaScript异步编程">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date"><i class="far fa-calendar-alt"></i> 2026-03-28</span>
-                            <span class="article-category">前端开发</span>
+            <div class="content-wrapper">
+                <!-- 左侧个人资料 -->
+                <div class="content-left">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20girl%20with%20blue%20hair%20wearing%20black%20and%20white%20dress%20artistic%20style&image_size=square" alt="个人头像">
                         </div>
-                        <h3>JavaScript异步编程详解</h3>
-                        <p>本文详细介绍了JavaScript中的异步编程模式，包括回调函数、Promise、async/await等，帮助你更好地理解和应用异步编程。</p>
-                        <div class="article-footer">
-                            <div class="article-stats">
-                                <span><i class="far fa-eye"></i> 1.2k</span>
-                                <span><i class="far fa-comment"></i> 45</span>
-                                <span><i class="far fa-heart"></i> 89</span>
+                        <h3>晓林</h3>
+                        <p>程序猿，白日梦想家，博主，英语爱好者，健身达人</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">1.2k</span>
+                                <span class="stat-label">粉丝</span>
                             </div>
-                            <a href="#" class="btn">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=react%20hooks%20code%20modern%20ui%20clean%20style&image_size=landscape_4_3" alt="React Hooks">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date"><i class="far fa-calendar-alt"></i> 2026-03-25</span>
-                            <span class="article-category">前端开发</span>
-                        </div>
-                        <h3>React Hooks使用指南</h3>
-                        <p>React Hooks为函数组件带来了状态管理和生命周期方法，本文将带你从零开始学习Hooks的使用方法和最佳实践。</p>
-                        <div class="article-footer">
-                            <div class="article-stats">
-                                <span><i class="far fa-eye"></i> 987</span>
-                                <span><i class="far fa-comment"></i> 32</span>
-                                <span><i class="far fa-heart"></i> 67</span>
+                            <div class="stat-item">
+                                <span class="stat-value">128</span>
+                                <span class="stat-label">文章</span>
                             </div>
-                            <a href="#" class="btn">阅读全文</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=python%20data%20analysis%20pandas%20chart%20clean%20style&image_size=landscape_4_3" alt="Python数据分析">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date"><i class="far fa-calendar-alt"></i> 2026-03-20</span>
-                            <span class="article-category">后端开发</span>
-                        </div>
-                        <h3>Python数据分析入门</h3>
-                        <p>数据分析是Python的重要应用领域，本文介绍了使用Pandas、NumPy和Matplotlib进行数据分析的基本方法。</p>
-                        <div class="article-footer">
-                            <div class="article-stats">
-                                <span><i class="far fa-eye"></i> 1.5k</span>
-                                <span><i class="far fa-comment"></i> 56</span>
-                                <span><i class="far fa-heart"></i> 102</span>
+                            <div class="stat-item">
+                                <span class="stat-value">3.5k</span>
+                                <span class="stat-label">阅读</span>
                             </div>
-                            <a href="#" class="btn">阅读全文</a>
                         </div>
+                        <button class="follow-btn">关注</button>
+                    </div>
+                    
+                    <!-- 精选文章 -->
+                    <div class="featured-articles">
+                        <h4>精选文章</h4>
+                        <ul class="article-list">
+                            <li>
+                                <a href="#">
+                                    <span class="article-title">Listary：革命性的搜索和启动软件</span>
+                                    <span class="article-date">2025-06-28</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="article-title">这才是《文件头》该有的样子</span>
+                                    <span class="article-date">2025-06-12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="article-title">Quicker：我愿一掷疏篱之神器的工具</span>
+                                    <span class="article-date">2025-05-18</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="article-title">一文搞懂五金一金！</span>
+                                    <span class="article-date">2025-01-13</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=frontend%20performance%20optimization%20speed%20meter%20clean%20style&image_size=landscape_4_3" alt="前端性能优化">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date"><i class="far fa-calendar-alt"></i> 2026-03-15</span>
-                            <span class="article-category">前端开发</span>
-                        </div>
-                        <h3>前端性能优化技巧</h3>
-                        <p>性能优化是前端开发的重要课题，本文分享了一些实用的前端性能优化技巧，帮助你构建更快、更流畅的Web应用。</p>
-                        <div class="article-footer">
-                            <div class="article-stats">
-                                <span><i class="far fa-eye"></i> 1.8k</span>
-                                <span><i class="far fa-comment"></i> 78</span>
-                                <span><i class="far fa-heart"></i> 145</span>
+                
+                <!-- 中间文章内容 -->
+                <div class="content-center">
+                    <!-- 关于本站 -->
+                    <div class="article-card">
+                        <div class="article-header">
+                            <h3>关于本站</h3>
+                            <div class="article-meta">
+                                <span class="article-author">晓林</span>
+                                <span class="article-date">2022-07-26</span>
+                                <span class="article-category">关于本站</span>
                             </div>
-                            <a href="#" class="btn">阅读全文</a>
+                        </div>
+                        <div class="article-content">
+                            <p>欢迎光临！</p>
+                            <a href="#" class="read-more">阅读全文 ></a>
                         </div>
                     </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=git%20version%20control%20command%20line%20clean%20style&image_size=landscape_4_3" alt="Git版本控制">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date"><i class="far fa-calendar-alt"></i> 2026-03-10</span>
-                            <span class="article-category">开发工具</span>
-                        </div>
-                        <h3>Git版本控制最佳实践</h3>
-                        <p>Git是现代开发中不可或缺的版本控制工具，本文总结了一些Git的最佳实践，帮助你更高效地使用Git进行协作开发。</p>
-                        <div class="article-footer">
-                            <div class="article-stats">
-                                <span><i class="far fa-eye"></i> 1.3k</span>
-                                <span><i class="far fa-comment"></i> 41</span>
-                                <span><i class="far fa-heart"></i> 92</span>
+                    
+                    <!-- 关于博主 -->
+                    <div class="article-card">
+                        <div class="article-header">
+                            <h3>关于博主</h3>
+                            <div class="article-meta">
+                                <span class="article-author">晓林</span>
+                                <span class="article-date">2024-05-30</span>
+                                <span class="article-category">关于本站</span>
                             </div>
-                            <a href="#" class="btn">阅读全文</a>
+                        </div>
+                        <div class="article-content">
+                            <p>你好，我是晓林，很高兴认识你！</p>
+                            <a href="#" class="read-more">阅读全文 ></a>
                         </div>
                     </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=nodejs%20backend%20development%20server%20code%20clean%20style&image_size=landscape_4_3" alt="Node.js后端开发">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date"><i class="far fa-calendar-alt"></i> 2026-03-05</span>
-                            <span class="article-category">后端开发</span>
-                        </div>
-                        <h3>Node.js后端开发入门</h3>
-                        <p>Node.js让JavaScript可以运行在服务器端，本文介绍了Node.js的基本概念和Express框架的使用方法。</p>
-                        <div class="article-footer">
-                            <div class="article-stats">
-                                <span><i class="far fa-eye"></i> 1.1k</span>
-                                <span><i class="far fa-comment"></i> 37</span>
-                                <span><i class="far fa-heart"></i> 76</span>
+                    
+                    <!-- 技术文章 -->
+                    <div class="article-card">
+                        <div class="article-header">
+                            <h3>使用火绒拦截流氓软件修改默认程序</h3>
+                            <div class="article-meta">
+                                <span class="article-author">晓林</span>
+                                <span class="article-date">2025-03-10</span>
+                                <span class="article-category">软件效率</span>
                             </div>
-                            <a href="#" class="btn">阅读全文</a>
+                        </div>
+                        <div class="article-content">
+                            <p>最近，在使用电脑的时候，经常总是会发现我的默认默认程序被自动更改。即使改回来了，过几分钟又给我改回去了，试了几次都这样，气的我都快崩溃了。网上搜索了下解决方法，发现可以用火绒拦截这种流氓行为，问题解决了！</p>
+                            <a href="#" class="read-more">阅读全文 ></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pagination">
-                <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
-                <a href="#" class="page-link active">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <span class="page-link">...</span>
-                <a href="#" class="page-link">10</a>
-                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                
+                <!-- 右侧边栏 -->
+                <div class="content-right">
+                    <!-- 预留空间 -->
+                </div>
             </div>
         </div>
     </section>
